@@ -10,7 +10,13 @@
  
  [React 前台演示](http://rw.femirror.com/)
  
+## 特性
 
+1 使用WordPress做内容管理,React重写前端.
+
+2 使用dva构建React项目,dva内置React全家桶.
+
+3 使用少部分antd组件,为后期更迭. 
 
 ## 调试
 
