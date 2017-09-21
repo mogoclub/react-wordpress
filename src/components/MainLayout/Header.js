@@ -1,6 +1,4 @@
 import React from 'react';
-import { connect } from 'dva';
-
 import { Menu, Icon } from 'antd';
 import { Link } from 'dva/router';
 import styles from './Header.css';
@@ -40,7 +38,7 @@ const Header =({dispath, location,categories })=> {
   }
 
   const menuItems = getMenus(menuTree, false)
-  let slug = location.query.slug;
+  let slug = location.query?location.query.slug:'';
   slug = slug?slug:'index';
   return (
       <div className={styles.header} >
@@ -57,6 +55,9 @@ const Header =({dispath, location,categories })=> {
               <Link to={`/`}>首页</Link>
           </Menu.Item>
             {menuItems}
+            <Menu.Item key={`github`}>
+              <a target={'_blank'} href="https://github.com/tyaqing/react-wordpress"><Icon type="github" />GitHub</a>
+            </Menu.Item>
           </Menu>
         </div>
       </div>

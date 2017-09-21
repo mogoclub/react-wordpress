@@ -64,10 +64,10 @@ function RouterConfig({ history, app }) {
     },
     {
       path: '*',
-      name: 'CountPage',
+      name: '404',
       getComponent(nextState, cb) {
         require.ensure([], (require) => {
-          cb(null,<div>404</div>);
+          cb(null,require('./routes/Error404'));
         });
       },
     },
