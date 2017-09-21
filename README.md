@@ -18,6 +18,12 @@
 
 3 使用少部分antd组件,为后期更迭. 
 
+## 使用说明
+
+首页的幻灯片是读取 `有特色图` `页面` 的数据
+
+导航会依照 `有文章` 的 `分类` 自动生成
+
 ## 调试
 
 `$ npm install`
@@ -57,4 +63,5 @@ http://react.wordpress.femirror.com/ 替换成你的WordPress的地址即可
    		try_files $uri /index.html;
 	}
 ```
+
 
