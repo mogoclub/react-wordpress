@@ -1,0 +1,87 @@
+
+html, body, :global(#root) {
+  height: 100%;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+
+.border-bottom{
+  border-bottom: 3px solid #E9E9E9;
+}
+.border-top{
+  border-top: 3px solid #E9E9E9;
+}
+.bg-white{
+  background-color: #fff;
+}
+
+@loading-color : #1DA57A;
+
+:global {
+  #nprogress {
+    pointer-events: none;
+    .bar {
+      background: @loading-color;
+      position: fixed;
+      z-index: 1024;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 2px;
+    }
+
+    .peg {
+      display: block;
+      position: absolute;
+      right: 0;
+      width: 100px;
+      height: 100%;
+      box-shadow: 0 0 10px @loading-color,0 0 5px @loading-color;
+      opacity: 1.0;
+      transform: rotate(3deg) translate(0px,-4px);
+    }
+
+    .spinner {
+      display: block;
+      position: fixed;
+      z-index: 1031;
+      top: 15px;
+      right: 15px;
+    }
+
+    .spinner-icon {
+      width: 18px;
+      height: 18px;
+      box-sizing: border-box;
+      border: solid 2px transparent;
+      border-top-color: @loading-color;
+      border-left-color: @loading-color;
+      border-radius: 50%;
+
+      :local {
+        animation: nprogress-spinner 400ms linear infinite;
+      }
+    }
+  }
+
+  .nprogress-custom-parent {
+    overflow: hidden;
+    position: relative;
+
+    #nprogress {
+      .bar,
+      .spinner {
+        position: absolute;
+      }
+    }
+  }
+}
+@keyframes nprogress-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
