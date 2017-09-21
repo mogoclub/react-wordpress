@@ -34,6 +34,9 @@
 
 `$ npm run build:dll` 
 
+调试前修改代理地址
+ .roadhogrc 中 proxy 的地址
+
 ## 构建
 
 `$ npm run build`
