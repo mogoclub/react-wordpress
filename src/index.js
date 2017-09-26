@@ -18,7 +18,7 @@ const app = dva({
   },
 });
 
-// 2. Plugins
+// 2. Plugins 插件
 // app.use(createLoading());
 
 
