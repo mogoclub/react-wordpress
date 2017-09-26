@@ -7,7 +7,7 @@ import './index.less';
 
 const ERROR_MSG_DURATION = 3; // 3 秒
 
-// 1. Initialize
+// 1. Initialize 初始化
 const app = dva({
   ...createLoading({
     effects: true,
